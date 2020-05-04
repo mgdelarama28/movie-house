@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/movies', function () {
+    return view('pages.movies.index');
 });
 
 Auth::routes();
