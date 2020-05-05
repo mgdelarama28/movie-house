@@ -10,7 +10,7 @@
             </li>
 
             <li class="ml-6">
-                <a href="">TV Shows</a>
+                <a href="{{ route('tv_shows.index') }}">TV Shows</a>
             </li>
 
             <li class="ml-6">

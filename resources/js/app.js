@@ -6,6 +6,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+window.moment = require('moment');
 
 /**
  * The following block of code may be used to automatically register your
@@ -25,6 +26,7 @@ Vue.component('movies-show', require('./views/movies/Show.vue').default);
 
 Vue.component('tv-shows-index', require('./views/tv_shows/Index.vue').default);
 Vue.component('tv-show-card', require('./components/TvShowCard.vue').default);
+Vue.component('tv-shows-show', require('./views/tv_shows/Show.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

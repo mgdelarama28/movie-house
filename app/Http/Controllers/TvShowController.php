@@ -13,4 +13,11 @@ class TvShowController extends Controller
             'apiKey' => $apiKey,
         ]);
     }
+
+    public function show($id)
+    {
+        return view('pages.tv_shows.show', [
+            'id' => $id,
+        ]);
+    }
 }
