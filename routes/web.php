@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/movies', function () {
-    return view('pages.movies.index');
-});
+Route::get('/movies', 'MovieController@index')->name('movies.index');
+Route::get('/movies/{id}', 'MovieController@show')->name('movies.show');
+
 
 Auth::routes();
 

@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Movies')
+
 @section('content')
-    <movies-index></movies-index>
+    <movies-index
+        :api-key="'{{ $apiKey }}'"
+    ></movies-index>
 @endsection

@@ -6,7 +6,7 @@
             </li>
 
             <li class="ml-16">
-                <a href="">Movies</a>
+                <a href="{{ route('movies.index') }}">Movies</a>
             </li>
 
             <li class="ml-6">
