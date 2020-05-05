@@ -23,6 +23,9 @@ Vue.component('movie-card', require('./components/MovieCard.vue').default);
 Vue.component('movies-index', require('./views/movies/Index.vue').default);
 Vue.component('movies-show', require('./views/movies/Show.vue').default);
 
+Vue.component('tv-shows-index', require('./views/tv_shows/Index.vue').default);
+Vue.component('tv-show-card', require('./components/TvShowCard.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
