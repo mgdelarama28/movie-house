@@ -93,12 +93,12 @@
             <div class="container mx-auto px-4 py-16">
                 <h2 class="text-4xl font-semibold">Cast</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                    <div class="mt-8" v-for="actor in tvShow.credits.cast.slice(0, 10)" :key="actor.cast_id">
-                        <a href="#">
+                    <div class="mt-8" v-for="actor in tvShow.credits.cast.slice(0, 10)" :key="actor.id">
+                        <a :href="`/actors/${actor.id}`">
                             <img :src="'https://image.tmdb.org/t/p/w500/' +actor.profile_path" alt="actor1" class="hover:opacity-75 transition ease-in-out duration-150">
                         </a>
                         <div class="mt-2">
-                            <a href="#" class="text-lg mt-2 hover:text-gray:300">{{ actor.name }}</a>
+                            <a :href="`/actors/${actor.id}`" class="text-lg mt-2 hover:text-gray:300">{{ actor.name }}</a>
                             <div class="text-sm text-gray-400">
                                 {{ actor.character }}
                             </div>
@@ -152,6 +152,7 @@
 
         mounted() {
             this.fetchTvShow(this.id);
+            console.log(this.$store.state.greeting);
         },
 
         data() {

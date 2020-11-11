@@ -3,7 +3,7 @@
         <div class="border-b border-gray-800">
             <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
                 <div class="flex-none">
-                    <img :src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" alt="poster" class="w-64 lg:w-96">
+                    <img :src="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" alt="poster" class="w-96">
                 </div>
                 
                 <div class="md:ml-24">
@@ -26,7 +26,7 @@
                     <div class="mt-12">
                         <h4 class="text-white font-semibold">Featured Crew</h4>
                         <div class="flex mt-4">
-                            <div class="mr-8" v-for="personnel in movie.credits.crew.slice(0, 5)" :key="personnel.crew_id">
+                            <div class="mr-8" v-for="personnel in movie.credits.crew.slice(0, 3)" :key="personnel.crew_id">
                                 <div>{{ personnel.name }}</div>
                                 <div class="text-sm text-gray-400">{{ personnel.job }}</div>
                             </div>
@@ -78,11 +78,11 @@
                 <h2 class="text-4xl font-semibold">Cast</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                     <div class="mt-8" v-for="actor in movie.credits.cast.slice(0, 10)" :key="actor.cast_id">
-                        <a href="#">
-                            <img :src="'https://image.tmdb.org/t/p/w500/' +actor.profile_path" alt="actor1" class="hover:opacity-75 transition ease-in-out duration-150">
+                        <a :href="`/actors/${actor.id}`">
+                            <img :src="'https://image.tmdb.org/t/p/w500/' +actor.profile_path" :alt="actor.name" class="hover:opacity-75 transition ease-in-out duration-150">
                         </a>
                         <div class="mt-2">
-                            <a href="#" class="text-lg mt-2 hover:text-gray:300">{{ actor.name }}</a>
+                            <a :href="`/actors/${actor.id}`" class="text-lg mt-2 hover:text-gray:300">{{ actor.name }}</a>
                             <div class="text-sm text-gray-400">
                                 {{ actor.character }}
                             </div>

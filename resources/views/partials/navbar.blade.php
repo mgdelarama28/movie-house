@@ -14,7 +14,7 @@
             </li>
 
             <li class="ml-6">
-                <a href="">Actors</a>
+                <a href="{{ route('actors.index') }}">Actors</a>
             </li>
         </ul>
 

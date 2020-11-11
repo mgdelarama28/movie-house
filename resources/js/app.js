@@ -3,6 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import store from './store';
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -28,6 +29,9 @@ Vue.component('tv-shows-index', require('./views/tv_shows/Index.vue').default);
 Vue.component('tv-show-card', require('./components/TvShowCard.vue').default);
 Vue.component('tv-shows-show', require('./views/tv_shows/Show.vue').default);
 
+Vue.component('actors-index', require('./views/actors/Index.vue').default);
+Vue.component('actors-show', require('./views/actors/Show.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -36,4 +40,5 @@ Vue.component('tv-shows-show', require('./views/tv_shows/Show.vue').default);
 
 const app = new Vue({
     el: '#app',
+    store,
 });
